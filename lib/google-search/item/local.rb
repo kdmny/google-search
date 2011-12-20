@@ -97,7 +97,7 @@ module Google
           @long = hash['lng'].to_f
           @lat = hash['lat'].to_f
           @viewport_mode = hash['viewportmode']
-          @phone_numbers = hash['phoneNumbers'].map { |phone| phone['number'] }
+          @phone_numbers = hash['phoneNumbers'].map { |phone| phone['number'] } if hash['phoneNumbers']
           @street_address = hash['streetAddress']
           @address_lines = hash['addressLines']
         end
